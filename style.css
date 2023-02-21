@@ -1,0 +1,15 @@
+body{
+    background-size: cover;
+    background-position: center;
+}
+.heading{
+    font-size: 28px;
+    width: 100%;
+    margin: 0;
+}
+.button{
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 10px;
+    height: 40px;
+}
