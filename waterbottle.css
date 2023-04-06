@@ -1,0 +1,21 @@
+body{
+    background-size: cover;
+    background-position: center;
+}
+.heading{
+    font-size: 28px;
+    width: 100%;
+    margin: 0;
+}
+.button{
+    float:right;
+}
+#status, #number_of_objects{
+    font-size: 23px;
+}
+canvas{
+    box-shadow: 10px 10px 10px rgb(15, 15, 175);
+    border-radius: 10px;
+    border: dotted;
+    margin-top: 30px;
+}
