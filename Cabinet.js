@@ -16,13 +16,13 @@ function draw(){
     if(statuss !=""){
         for (i=0; i < objects.length; i++){
             document.getElementById("status").innerHTML = "Status: Objects Detected";
-
+            document.getElementById("number_of_objects").innerHTML = "There are many objects(I'm not going to count that) from which the cocossd model has detected one object"
             fill("#fc0303");
             percent = floor(objects[i].confidence * 100);
-            text(objects[i].label + " " + percent + "%",objects[i].x - 14, objects[i].y - 175);
+            text(objects[i].label + " " + percent + "%",objects[i].x + 15, objects[i].y + 15);
             noFill();
             stroke("#fc0303");
-            rect(objects[i].x - 14, objects[i].y - 175, objects[i].width - 2326, objects[i].height - 2850);
+            rect(objects[i].x , objects[i].y, objects[i].width, objects[i].height);
         }
     }
 }

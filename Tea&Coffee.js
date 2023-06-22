@@ -15,11 +15,19 @@ function setup(){
 }
 function draw(){
     image(img, 0, 0, 380, 380);
+    document.getElementById("status").innerHTML = "Status: Objects Not Detected";
+            document.getElementById("number_of_objects").innerHTML = "There are many objects(I'm not going to count that) from which the cocossd model has detected zero objects"
+            fill("#fc0303");
     if(statuss !=""){
         for (i=0; i < objects.length; i++){
+            document.getElementById("status").innerHTML = "Status: Objects Detected";
+            document.getElementById("number_of_objects").innerHTML = "There are many objects(I'm not going to count that) from which the cocossd model has detected one object"
+            fill("#fc0303");
             percent = floor(objects[i].confidence * 100);
-            text(objects[i].label + " " + percent + "%", objects[i].x + 15, objects[i].y + 15);
-            rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height);
+            text(objects[i].label + " " + percent + "%",objects[i].x + 15, objects[i].y + 15);
+            noFill();
+            stroke("#fc0303");
+            rect(objects[i].x , objects[i].y, objects[i].width, objects[i].height);
         }
     }
 }
